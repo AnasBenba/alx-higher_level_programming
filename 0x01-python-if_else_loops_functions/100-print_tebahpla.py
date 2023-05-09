@@ -9,4 +9,3 @@ for num in reversed(range(97, 123)):
         flag = 0
         c = chr(num-32)
         print("{}".format(c), end="")
-
