@@ -38,6 +38,12 @@ listint_t *insert_node(listint_t **head, int number)
 				ptr1 = ptr1->next;
 			}
 		}
+
+		if (!ptr1->next)
+		{
+			ptr1->next = ptr;
+			return (ptr);
+		}
 		
 		ptr2 = ptr1;
 		ptr1 = ptr1->next;
