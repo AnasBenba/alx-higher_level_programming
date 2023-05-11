@@ -8,7 +8,11 @@ def main():
     if length == 0:
         print("{} arguments.".format(length))
 
-    if length > 0:
+    elif length == 1:
+        print("{} argument:".format(length))
+        print("{}: {}".format(length, sys.argv[1]))
+
+    else:
         n = 1
 
         print("{} arguments:".format(length))
