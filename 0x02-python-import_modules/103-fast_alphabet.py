@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-print("{}".format(alpha))
+import string, sys
+print(string.ascii_uppercase)
