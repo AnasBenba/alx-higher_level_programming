@@ -13,6 +13,7 @@ def delete_at(my_list=[], idx=0):
     while n <= length:
         if n == idx:
             my_list.remove(value)
-            break
-        n += 1
+            n += 1
+        else:
+            n += 1
     return my_list
