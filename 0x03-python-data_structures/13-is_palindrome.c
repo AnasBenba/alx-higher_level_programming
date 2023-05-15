@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
-		return (0);
+		return (1);
 	}
 	while (fast && fast->next)
 	{
@@ -38,17 +38,6 @@ int is_palindrome(listint_t **head)
 		*head = (*head)->next;
 		tmp = tmp->next;
 	}
-
-	tmp = prev;
-	prev = NULL;
-	while (tmp)
-	{
-		next = tmp->next;
-		tmp->next = prev;
-		prev = tmp;
-		tmp = next;
-	}
-	*head = prev;
 
 	return (1);
 }
