@@ -39,15 +39,15 @@ Feel free to explore the code samples and experiment with different scenarios to
 ## Contents
 
 - Sets
- - Introduction to sets
- - Creating sets
- - Adding and removing elements
- - Set operations
+  - Introduction to sets
+  - Creating sets
+  - Adding and removing elements
+  - Set operations
 - Dictionaries
- - Introduction to dictionaries
- - Creating dictionaries
- - Accessing and modifying values
- - Dictionary operations
+  - Introduction to dictionaries
+  - Creating dictionaries
+  - Accessing and modifying values
+  - Dictionary operations
 
 ## Contributing
 
