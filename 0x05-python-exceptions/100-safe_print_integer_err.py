@@ -5,7 +5,6 @@ def safe_print_integer_err(value):
     try:
         print("{:d}".format(value))
         return True
-    except (ValueError, TypeError):
-        error_message = "Unknown format code 'd' for object of type 'str'"
-        sys.stderr.write("Exception: {}\n".format(error_message))
+    except (ValueError, TypeError) as err:
+        sys.stderr.write("Exception: {}\n".format(err))
         return False
