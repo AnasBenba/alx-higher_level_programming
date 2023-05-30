@@ -10,4 +10,4 @@ class Square:
     Methods:
         None
     """
-    ...
+    pass
