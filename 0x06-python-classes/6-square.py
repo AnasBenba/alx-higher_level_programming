@@ -117,8 +117,10 @@ class Square:
         if self._Square__size == 0:
             print()
         else:
-            if self._Square__position[1] > 0:
-                print("\n" * self.__position[1], end="")
+            j = 0
+            while self._Square__position[1] > j:
+                print()
+                j += 1
             while i < self._Square__size:
                 print(" "*self._Square__position[0]+"#"*self._Square__size)
                 i += 1
