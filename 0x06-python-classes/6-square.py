@@ -26,7 +26,8 @@ class Square:
 
         Args:
             size (int, optional): The size of the square (default is 0).
-            position (tuple, optional): The position of the square (default is (0, 0)).
+            position (tuple, optional): The position
+            of the square (default is (0, 0)).
 
         Raises:
             TypeError: If size is not an integer.
@@ -83,15 +84,16 @@ class Square:
             value (tuple): The new position for the square.
 
         Raises:
-            TypeError: If position is not a tuple of 2 positive integers.
+            TypeError: If position is not a tuple of
+            2 positive integers.
         """
-        self._Square__position = value
-        if not isinstance(self._Square__position, tuple) and len(self._Square__position) != 2:
+        if not isinstance(value, tuple) and len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif not isinstance(self._Square__position[0], int):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif not isinstance(self._Square__position[1], int):
             raise TypeError("position must be a tuple of 2 positive integers")
+        self._Square__position = value
 
     def area(self):
         """
@@ -108,7 +110,8 @@ class Square:
 
         If the size of the square is 0, it prints an empty line.
         Otherwise, it prints a pattern of '#' characters forming a square.
-        The position parameter can be used to offset the square by adding spaces before the '#' characters.
+        The position parameter can be used to offset the square
+        by adding spaces before the '#' characters.
         """
         i = 0
         if self._Square__size == 0:
@@ -116,6 +119,6 @@ class Square:
         else:
             if self._Square__position[1] > 0:
                 print("\n" * self.__position[1], end="")
-            while i <  self._Square__size:
-                print(" " * self._Square__position[0] + "#" * self._Square__size)
+            while i < self._Square__size:
+                print(" "*self._Square__position[0]+"#"*self._Square__size)
                 i += 1
