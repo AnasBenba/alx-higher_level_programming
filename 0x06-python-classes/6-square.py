@@ -113,14 +113,10 @@ class Square:
         The position parameter can be used to offset the square
         by adding spaces before the '#' characters.
         """
-        i = 0
         if self._Square__size == 0:
             print()
         else:
-            j = 0
-            while self._Square__position[1] > j:
+            for j in range(self._Square__position[1]):
                 print()
-                j += 1
-            while i < self._Square__size:
-                print(" "*self._Square__position[0]+"#"*self._Square__size)
-                i += 1
+            for _ in range(self._Square__size):
+                print(" " * self._Square__position[0] + "#" * self._Square__size)
