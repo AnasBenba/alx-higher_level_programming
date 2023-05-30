@@ -119,5 +119,8 @@ class Square:
             for _ in range(self._Square__position[1]):
                 print()
             for _ in range(self._Square__size):
-                print(" " * self._Square__position[0], end="")
-                print("#" * self._Square__size)
+                for _ in range(self._Square__position[0]):
+                    print(" ", end="")
+                for _ in range(self._Square__size):
+                    print("#", end="")
+                print()
