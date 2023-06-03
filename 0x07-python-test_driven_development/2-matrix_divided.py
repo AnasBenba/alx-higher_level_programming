@@ -1,6 +1,15 @@
 #!/usr/bin/python3
+"""
+function that divides all elements of a matrix
+
+it takes a list of lists and an integer
+"""
+
 
 def matrix_divided(matrix, div):
+    """
+    it returns new_matrix
+    """
     new_matrix = []
 
     if not isinstance(matrix, list):
