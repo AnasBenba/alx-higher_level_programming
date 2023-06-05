@@ -173,7 +173,8 @@ class Rectangle:
             size (int): The size of the square. Defaults to 0.
 
         Returns:
-            Rectangle: A new instance of the Rectangle class representing a square.
+            Rectangle: A new instance of the Rectangle
+            class representing a square.
         """
         width = size
         height = size
