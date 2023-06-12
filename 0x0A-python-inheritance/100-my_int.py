@@ -11,7 +11,8 @@ class MyInt(int):
             value: The value to compare with.
 
         Returns:
-            bool: Always returns False, indicating instances of MyInt are never equal to any value.
+            bool: Always returns False, indicating instances
+            of MyInt are never equal to any value.
         """
         return False
 
@@ -23,6 +24,7 @@ class MyInt(int):
             value: The value to compare with.
 
         Returns:
-            bool: Always returns True, indicating instances of MyInt are always not equal to any value.
+            bool: Always returns True, indicating
+            instances of MyInt are always not equal to any value.
         """
         return True
