@@ -20,18 +20,21 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     Rectangle class, inherits from BaseGeometry.
 
-    This class represents a rectangle shape and provides methods for calculating
+    This class represents a rectangle
+    shape and provides methods for calculating
     its area and validating the width and height.
 
     Attributes:
         None
 
     Methods:
-        __init__(self, width, height): Initializes a rectangle object with the given width and height.
+        __init__(self, width, height): Initializes a
+        rectangle object with the given width and height.
     """
     def __init__(self, width, height):
         """
