@@ -1,26 +1,69 @@
-# 1-my_list.txt
+The `1-my_list` module
+======================
+
+Using `MyList`
+-------------------
+
+Import the function:
+        >>> MyList = __import__("1-my_list").MyList
 
 
-class MyList that inherits from list
+Testing:
+	 >>> l = MyList()
+	 >>> l.print_sorted()
+	 []
 
+Testing:
+	 >>> l.append(1)
+	 >>> l.append(2)
+	 >>> l.append(3)
+	 >>> l.append(4)
+	 >>> print(l)
+	 [1, 2, 3, 4]
 
-::
-	>>> MyList = __import__('1-my_list').MyList
-	>>> my_list = MyList()
-	>>> type(my_list)
-	<class '1-my_list.MyList'>
+Testing:
+	 >>> l.print_sorted()
+	 [1, 2, 3, 4]
 
-::
-	>>> my_list = MyList(29, 4, 0, 46, 100)
-	>>> my_list.print_sorted()
-	[0, 4, 29, 46, 100]
+Testing:
+	 >>> l = MyList()
+	 >>> l.append(4)
+	 >>> l.append(3)
+	 >>> l.append(2)
+	 >>> l.append(1)
+	 >>> print(l)
+	 [4, 3, 2, 1]
+	 >>> l.print_sorted()
+	 [1, 2, 3, 4]
+	 >>> print(l)
+	 [4, 3, 2, 1]
 
-::
-	>>> my_list = MyList(-2, 4, -15, 8)
-	>>> my_list.print_sorted()
-	[-15, -2, 4, 8]
+Testing:
+	 >>> l.append(-1)
+	 >>> l.append(5)
+	 >>> print(l)
+	 [4, 3, 2, 1, -1, 5]
+	 >>> l.print_sorted()
+	 [-1, 1, 2, 3, 4, 5]
+	 >>> print(l)
+	 [4, 3, 2, 1, -1, 5]
 
-::
-	>>> my_list = MyList(0, -2, -1, 8)
-	>>> my_list.print_sorted()
-	[-2, -1, 0, 8]
+Testing:
+	 >>> l = MyList()
+	 >>> l.append(-10)
+	 >>> l.append(-1)
+	 >>> l.append(-7)
+	 >>> l.append(-2)
+	 >>> l.append(-8)
+	 >>> print(l)
+	 [-10, -1, -7, -2, -8]
+	 >>> l.print_sorted()
+	 [-10, -8, -7, -2, -1]
+	 >>> print(l)
+         [-10, -1, -7, -2, -8]
+
+Testing:
+	 >>> l.print_sorted(1)
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: print_sorted() takes 1 positional argument but 2 were given

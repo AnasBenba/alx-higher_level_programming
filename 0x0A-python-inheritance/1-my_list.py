@@ -17,4 +17,4 @@ class MyList(list):
             my_list = MyList([3, 1, 2])
             my_list.print_sorted()  # Output: [1, 2, 3]
         """
-         print(sorted(self))
+        print(sorted(self))
