@@ -3,6 +3,7 @@
 
 
 class MyInt(int):
+    """== is False != is True"""
     def __eq__(self, value):
         """
         Overrides the equality operator '=='.
