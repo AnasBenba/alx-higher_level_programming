@@ -84,3 +84,22 @@ Testing:
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: name must be an integer
+
+Testing:
+         >>> bg.integer_validator("name", (4,5))
+         Traceback (most recent call last):
+         ...
+         TypeError: name must be an integer
+
+Testing:
+         >>> bg = BaseGeometry()
+         >>> bg.integer_validator("name", {4, 5})
+         Traceback (most recent call last):
+         ...
+         TypeError: name must be an integer
+
+Testing:
+         >>> bg.integer_validator("name", None)
+         Traceback (most recent call last):
+         ...
+         TypeError: name must be an integer
