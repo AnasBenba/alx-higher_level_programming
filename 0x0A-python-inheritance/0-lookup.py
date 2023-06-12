@@ -2,5 +2,5 @@
 
 def lookup(obj):
     my_list = []
-    my_list = dir(obj)
+    my_list.append(dir(obj))
     return my_list
