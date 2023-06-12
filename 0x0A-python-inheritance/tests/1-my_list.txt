@@ -1,0 +1,28 @@
+# 1-my_list.txt
+
+
+class MyList that inherits from list
+
+Import:
+>>> MyList = __import__('1-my_list').MyList
+
+
+Tests:
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+
+>>> my_list = MyList(29, 4, 0, 46, 100)
+>>> my_list.print_sorted()
+[0, 4, 29, 46, 100]
+
+
+>>> my_list = MyList(-2, 4, -15, 8)
+>>> my_list.print_sorted()
+[-15, -2, 4, 8]
+
+
+>>> my_list = MyList(0, -2, -1, 8)
+>>> my_list.print_sorted()
+[-2, -1, 0, 8]
