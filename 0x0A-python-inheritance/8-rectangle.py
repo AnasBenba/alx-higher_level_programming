@@ -52,6 +52,6 @@ class Rectangle(BaseGeometry):
             None
         """
         super().integer_validator("width", width)
-        self._Rectangle__width = width
         super().integer_validator("height", height)
-        self._Rectangle__height = height
+        self.__width = width
+        self.__height = height
