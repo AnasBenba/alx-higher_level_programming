@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """class Student that defines a student"""
 
+
 class Student:
     """
     representing a student.
@@ -8,7 +9,8 @@ class Student:
 
     def __init__(self, first_name, last_name, age):
         """
-        Initializes a Student object with the provided first name, last name, and age.
+        Initializes a Student object with the provided
+        first name, last name, and age.
 
         Args:
             first_name (str): The first name of the student.
