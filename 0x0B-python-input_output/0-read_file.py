@@ -6,4 +6,4 @@ def read_file(filename=""):
     """ prints to stdout"""
     with open(filename, "r") as file:
         contant = file.read()
-        print(contant.strip())
+        print(contant)
