@@ -158,7 +158,10 @@ class Rectangle(Base):
         Prints a rectangle with the specified width and
         height using the '#' character.
         """
+        for y in range(self.__y):
+            print()
         for i in range(self.__height):
+            print(" " * self.__x, end="")
             print("#" * self.__width)
 
     def __str__(self):
