@@ -188,7 +188,7 @@ class Rectangle(Base):
                     - Argument 5: y (optional)
             **kwargs: Keyword arguments to update the attributes
             by specifying attribute names as keys.
-        
+
         Note:
             If both positional arguments and keyword arguments are
             provided, the keyword arguments take precedence.
