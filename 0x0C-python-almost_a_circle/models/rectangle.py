@@ -1,7 +1,8 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 from models.base import Base
 
 """class Rectangle that inherits from Base"""
+
 
 class Rectangle(Base):
     """
@@ -151,3 +152,11 @@ class Rectangle(Base):
         """
         result = self.__width * self.__height
         return result
+
+    def display(self):
+        """
+        Prints a rectangle with the specified width and
+        height using the '#' character.
+        """
+        for i in range(self.__height):
+            print("#" * self.__width)
