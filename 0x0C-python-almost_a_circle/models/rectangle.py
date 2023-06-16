@@ -174,7 +174,7 @@ class Rectangle(Base):
         return string.format(self.id, self.__x, self.__y,
                              self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Updates the attributes of the rectangle with the provided arguments.
 
@@ -186,9 +186,29 @@ class Rectangle(Base):
                     - Argument 3: height (optional)
                     - Argument 4: x (optional)
                     - Argument 5: y (optional)
+            **kwargs: Keyword arguments to update the attributes
+            by specifying attribute names as keys.
+        
+        Note:
+            If both positional arguments and keyword arguments are
+            provided, the keyword arguments take precedence.
+
+
         """
         if len(args) >= 1:
             self.id = args[0]
+        else:
+            for key in kwargs.keys():
+                if key == 'id':
+                    self.id = kwargs[key]
+                if key == 'width':
+                    self.width = kwargs[key]
+                if key == 'height':
+                    self.height = kwargs[key]
+                if key == 'x':
+                    self.x = kwargs[key]
+                if key == 'y':
+                    self.y = kwargs[key]
         if len(args) >= 2:
             self.width = args[1]
         if len(args) >= 3:
