@@ -173,3 +173,27 @@ class Rectangle(Base):
         string = "[Rectangle] ({}) {}/{} - {}/{}"
         return string.format(self.id, self.__x, self.__y,
                              self.__width, self.__height)
+
+    def update(self, *args):
+        """
+        Updates the attributes of the rectangle with the provided arguments.
+
+        Args:
+            *args: Variable number of arguments to update the
+                   attributes in the following order:
+                    - Argument 1: id (optional)
+                    - Argument 2: width (optional)
+                    - Argument 3: height (optional)
+                    - Argument 4: x (optional)
+                    - Argument 5: y (optional)
+        """
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.width = args[1]
+        if len(args) >= 3:
+            self.height = args[2]
+        if len(args) >= 4:
+            self.x = args[3]
+        if len(args) >= 5:
+            self.y = args[4]
