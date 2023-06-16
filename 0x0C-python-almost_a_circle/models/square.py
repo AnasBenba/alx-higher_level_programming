@@ -88,3 +88,17 @@ class Square(Rectangle):
             self.x = args[2]
         if len(args) >= 4:
             self.y = args[3]
+
+    def to_dictionary(self):
+        """
+        Converts the attributes of the square to a dictionary.
+
+        Returns:
+            dict: A dictionary containing the attributes of the square.
+        """
+        my_dict = {}
+        my_dict['id'] = self.id
+        my_dict['size'] = self.size
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        return my_dict
