@@ -217,3 +217,18 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) >= 5:
             self.y = args[4]
+
+    def to_dictionary(self):
+        """
+        Converts the attributes of the Rectangle to a dictionary.
+
+        Returns:
+            dict: A dictionary containing the attributes of the Rectangle.
+        """
+        my_dict = {}
+        my_dict['id'] = self.id
+        my_dict['width'] = self.width
+        my_dict['height'] = self.height
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        return my_dict
