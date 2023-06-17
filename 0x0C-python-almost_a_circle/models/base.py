@@ -62,3 +62,28 @@ class Base:
                 my_dict.append(obj.to_dictionary())
         with open("{}.json".format(class_name), 'w') as file:
             json.dump(my_dict, file)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Converts a JSON string to a list of dictionaries.
+
+        Args:
+            json_string (str): The JSON string to be converted.
+
+        Returns:
+            list: A list of dictionaries if the JSON string represents a valid list of dictionaries.
+                  An empty list if the JSON string is None or represents an invalid list of dictionaries.
+                  None if the JSON string is not a list.
+
+        Raises:
+            None
+        """
+        if json_string is None:
+            return []
+        my_list = json.loads(json_string)
+        if type(my_list) == list:
+            for item in my_list:
+                if not isinstance(item, dict):
+                    return
+        return my_list
