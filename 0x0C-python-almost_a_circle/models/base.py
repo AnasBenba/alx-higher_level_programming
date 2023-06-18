@@ -72,9 +72,11 @@ class Base:
             json_string (str): The JSON string to be converted.
 
         Returns:
-            list: A list of dictionaries if the JSON string represents a valid list of dictionaries.
-                  An empty list if the JSON string is None or represents an invalid list of dictionaries.
-                  None if the JSON string is not a list.
+            list: A list of dictionaries if the JSON string
+            represents a valid list of dictionaries.
+            An empty list if the JSON string is None or
+            represents an invalid list of dictionaries.
+            None if the JSON string is not a list.
 
         Raises:
             None
@@ -87,3 +89,26 @@ class Base:
                 if not isinstance(item, dict):
                     return
         return my_list
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Creates an instance of the class with all attributes
+        already set based on the provided dictionary.
+
+        Args:
+            **dictionary: A dictionary containing attribute-value pairs.
+
+        Returns:
+            An instance of the class with attributes
+            set based on the dictionary.
+
+        Raises:
+            None.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
