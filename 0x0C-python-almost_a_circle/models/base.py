@@ -60,6 +60,7 @@ class Base:
         for obj in list_objs:
             if isinstance(obj, Base):
                 my_dict.append(obj.to_dictionary())
+        json_str = cls.to_json_string(my_dict)
         with open("{}.json".format(class_name), 'w') as file:
             json.dump(my_dict, file)
 
