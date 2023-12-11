@@ -9,7 +9,7 @@ if (process.argv.length <= 2 || Number.isNaN(parseInt(process.argv[2]))) {
 } else {
   while (x < process.argv[2]) {
     while (y < process.argv[2]) {
-      output += 'x';
+      output += 'X';
       y++;
     }
     y = 0;
