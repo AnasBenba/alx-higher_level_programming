@@ -7,6 +7,6 @@ process.argv.forEach(function (pro) {
 
 if (i <= 2) {
   console.log('No argument');
-} else if (i === 3) {
+} else {
   console.log(process.argv[2]);
 }
