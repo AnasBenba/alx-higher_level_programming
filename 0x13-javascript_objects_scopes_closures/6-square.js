@@ -6,13 +6,13 @@ class Square extends baseSquare {
     if (c === undefined) {
       super.print();
     } else {
-        for (let i = 0; i < this.height; i++) {
-          let output = '';
-          for (let y = 0; y < this.width; y++) {
-            output += c;
-          }
-          console.log(output);
+      for (let i = 0; i < this.height; i++) {
+        let output = '';
+        for (let y = 0; y < this.width; y++) {
+          output += c;
         }
+        console.log(output);
+      }
     }
   }
 }
