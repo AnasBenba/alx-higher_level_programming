@@ -10,8 +10,7 @@ exports.converter = function (base) {
 	    while (num > 0) {
 	      reminder = num % base;
 	      result = reminder.toString() + result;
-	      num = num / base;
-	      num = parseInt(num);
+	      num = Math.floor(num / base);
 	    }
 	  } else {
 	    while (num > 0) {
