@@ -8,7 +8,7 @@ def main():
     passw = sys.argv[2]
     name = sys.argv[3]
     searched = sys.argv[4]
-    q = f'SELECT * FROM states WHERE name = "{searched}"'
+    q = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id".format(searched)
 
     db = MySQLdb.connect(host="localhost", user=usern, passwd=passw, db=name)
     cursor = db.cursor()

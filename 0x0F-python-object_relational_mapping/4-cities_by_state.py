@@ -7,13 +7,12 @@ def main():
     usern = sys.argv[1]
     passw = sys.argv[2]
     name = sys.argv[3]
-    searched = sys.argv[4]
-    q = f'SELECT * FROM states WHERE name = %s ORDER BY states.id'
-
+    q2 = "LEFT JOIN states ON state_id = states.id ORDER BY cities.id"
+    q = "SELECT cities.id, cities.name, states.name FROM cities {}".format(q2)
 
     db = MySQLdb.connect(host="localhost", user=usern, passwd=passw, db=name)
     cursor = db.cursor()
-    cursor.execute(q, (searched,))
+    cursor.execute(q)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
