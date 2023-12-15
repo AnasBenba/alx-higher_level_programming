@@ -7,10 +7,15 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from model_state import Base, State
 
-if __name__ == "__main__":
+def main():
+    """Main function to connect to the database"""
     text = f'mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}'
     engine = create_engine(text)
     session = Session(engine)
-    result = session.query(State).order_by(State.id).all()
+    result = session.query(State).order_by(State.id.asc()).all()
     for r in result:
         print(f'{r.id}: {r.name}')
+
+
+if __name__ == "__main__":
+    main()
