@@ -5,16 +5,17 @@ import MySQLdb
 
 def main():
     """
-    connect to a Mysql database and retrives data from the 'states' table.
+    Connects to a MySQL database and retrieves data from the 'states' table.
+
     Usage:
-    python3 0-select_states.py <username> <password> <database>
+    python script_name.py <username> <password> <database_name>
 
     Args:
-    usern = username
-    passw = password
-    name = database
+    - sys.argv[1]: MySQL username
+    - sys.argv[2]: MySQL password
+    - sys.argv[3]: MySQL database name
 
-    print the row from 'states' orderd by id column
+    Prints the rows from the 'states' table ordered by the 'id' column.
     """
     usern = sys.argv[1]
     passw = sys.argv[2]
