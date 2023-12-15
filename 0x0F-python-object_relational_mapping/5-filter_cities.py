@@ -1,10 +1,29 @@
 #!/usr/bin/python3
-from errno import WSAEDQUOT
+"""
+ connect to MySQL database and retrieves data from the table
+
+ Usage:
+ ./1-filter_states.py <username> <password> <database_name>
+ <state name>
+
+ Args:
+ - sys.argv[1]: MySQL username
+ - sys.argv[2]: MySQL password
+ - sys.argv[3]: MySQL database name
+ - sys.argv[4]: state name
+
+ print cities from the database
+"""
+
 import sys
 import MySQLdb
 
 
 def main():
+    """
+    Main function to connect to the database and retrieve
+    data from the 'cities' table
+    """
     usern = sys.argv[1]
     passw = sys.argv[2]
     name = sys.argv[3]
