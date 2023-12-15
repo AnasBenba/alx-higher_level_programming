@@ -29,7 +29,6 @@ def main():
     searched = sys.argv[4]
     q = f'SELECT * FROM states WHERE BINARY name = %s ORDER BY states.id'
 
-
     db = MySQLdb.connect(host="localhost", user=usern, passwd=passw, db=name)
     cursor = db.cursor()
     cursor.execute(q, (searched,))
