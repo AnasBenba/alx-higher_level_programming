@@ -10,9 +10,9 @@ from model_state import Base, State
 
 def main():
     """Main function to connect to the database"""
-    text = f'mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}'
+    data_URL = f'mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}'
+    engine = create_engine(data_URL)
     Base.metadata.create_all(engine)
-    engine = create_engine(text)
     session = Session(engine)
     result = session.query(State).order_by(State.id.asc()).all()
     for r in result:
