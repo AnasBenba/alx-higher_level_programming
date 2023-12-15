@@ -3,7 +3,7 @@
 Connects to a MySQL database and retrieves data from the 'states' table.
 
 Usage:
-python script_name.py <username> <password> <database_name>
+./0-select_states.py <username> <password> <database_name>
 
 Args:
 - sys.argv[1]: MySQL username

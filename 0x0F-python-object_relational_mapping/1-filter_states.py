@@ -25,7 +25,7 @@ def main():
     usern = sys.argv[1]
     passw = sys.argv[2]
     name = sys.argv[3]
-    q = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id"
+    q = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id"
 
     db = MySQLdb.connect(host='localhost', user=usern, passwd=passw, db=name)
     cursor = db.cursor()
