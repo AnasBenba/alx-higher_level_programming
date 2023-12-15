@@ -5,13 +5,10 @@ This script defines a SQLAlchemy model for the
 """
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import (create_engine,
-                        Column,
+from sqlalchemy import (Column,
                         Integer,
                         String)
 from sys import argv
-
-engine = create_engine(f'mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}')
 Base = declarative_base()
 
 
