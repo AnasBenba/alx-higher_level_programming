@@ -1,21 +1,26 @@
 #!/usr/bin/python3
+"""
+Connects to a MySQL database and retrieves data from the 'states' table.
+
+Usage:
+python script_name.py <username> <password> <database_name>
+
+Args:
+- sys.argv[1]: MySQL username
+- sys.argv[2]: MySQL password
+- sys.argv[3]: MySQL database name
+
+Prints the rows from the 'states' table ordered by the 'id' column.
+"""
+
 import sys
 import MySQLdb
 
 
 def main():
     """
-    Connects to a MySQL database and retrieves data from the 'states' table.
-
-    Usage:
-    python script_name.py <username> <password> <database_name>
-
-    Args:
-    - sys.argv[1]: MySQL username
-    - sys.argv[2]: MySQL password
-    - sys.argv[3]: MySQL database name
-
-    Prints the rows from the 'states' table ordered by the 'id' column.
+    Main function to connect to the database and retrieve
+    data from the 'states' table
     """
     usern = sys.argv[1]
     passw = sys.argv[2]
