@@ -28,7 +28,7 @@ def main():
     name = sys.argv[3]
     searched = sys.argv[4]
     q2 = 'ORDER BY states.id'
-    q = "SELECT * FROM states WHERE name = '{}' {}".format(searched, q2)
+    q = "SELECT * FROM states WHERE BINARY name = '{}' {}".format(searched, q2)
 
     db = MySQLdb.connect(host="localhost", user=usern, passwd=passw, db=name)
     cursor = db.cursor()
