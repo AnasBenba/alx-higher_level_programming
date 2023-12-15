@@ -20,10 +20,10 @@ def main():
     passw = sys.argv[2]
     name = sys.argv[3]
 
-    db = MySQLdb.connect(host='localhost', user=usern, passwd=passw, db=name)
+    db = MySQLdb.connect('localhost', usern, passw, name, port=3306)
     cursor = db.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY states.id")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     rows = cursor.fetchall()
 
     for row in rows:
