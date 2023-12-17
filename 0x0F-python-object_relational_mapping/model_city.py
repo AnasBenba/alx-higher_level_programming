@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """the class definition of a City"""
-from re import T
 from model_state import Base
 from sqlalchemy import (Column,
                         Integer,
