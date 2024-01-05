@@ -13,21 +13,7 @@ def find_peak(list_of_integers):
         return None
     if len(my_list) == 2:
         return max(my_list)
-    first = 0
-    mid = 1
-    last = 2
-    peak = my_list[0]
-
-    while (last < len(my_list)):
-        if my_list[mid] == peak:
-            mid += 1
-            first += 1
-            last += 1
-        elif my_list[mid] >= my_list[first]:
-            if my_list[mid] >= my_list[last]:
-                if peak < my_list[mid]:
-                    peak = my_list[mid]
-        mid += 1
-        first += 1
-        last += 1
-    return peak
+    del my_list[0]
+    del my_list[len(my_list) - 1]
+    value = max(my_list)
+    return value
