@@ -11,11 +11,14 @@ def find_peak(list_of_integers):
     my_list = list_of_integers
     if len(my_list) == 0:
         return None
+    if len(my_list) == 1:
+        return my_list[0]
+    if len (my_list) == 2:
+        return max(my_list)
     first = 0
     mid = 1
     last = 2
-    peak = my_list[0]
-
+    peak = 0
     while (last < len(my_list)):
         if my_list[mid] == peak:
             mid += 1
