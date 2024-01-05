@@ -24,5 +24,4 @@ def find_peak(list_of_integers):
         mid += 1
         first += 1
         last += 1
-    
     return peak
