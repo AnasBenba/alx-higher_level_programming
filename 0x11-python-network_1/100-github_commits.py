@@ -9,5 +9,6 @@ if __name__ == "__main__":
     url = f'https://api.github.com/repos/{sys.argv[1]}/{sys.argv[2]}/commits'
     responde = requests.get(url)
     r = responde.json()
-    for i in range(0, 10):
-        print(f"{r[i]['sha']}: {r[i]['commit']['author']['name']}")
+    count = 0
+    for i in r[:10]:
+        print(f"{i.get('sha')}: {i.get('commit').get('author').get('name')}")
