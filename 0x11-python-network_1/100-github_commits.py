@@ -10,5 +10,5 @@ if __name__ == "__main__":
     responde = requests.get(url)
     r = responde.json()
     count = 0
-    for i in range(0, 10):
-        print(f"{r[i]['sha']}: {r[i]['commit']['author']['name']}")
+    for i in r[:10]:
+        print(f"{i.get('sha')}: {i.get('commit').get('author').get('name')}")
