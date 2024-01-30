@@ -6,7 +6,6 @@ const fs = require('fs');
 const url = process.argv[2];
 const filePath = process.argv[3];
 
-
 request.get(url, (error, response, body) => {
   if (error) {
     console.error(error);
@@ -18,3 +17,4 @@ request.get(url, (error, response, body) => {
     });
   }
 });
+
